@@ -9,17 +9,22 @@ function Details({ singlePlace }) {
   return (
     <section className='details-container'>
       <img className='details-image' src={src} alt={alt} />
-      <div>
+      <div className='details-info'>
         <h2>{name}</h2>
         <p>{category}</p>
-        <p>{rating}</p>
-        <p>{address}</p>
-        <p>{location}</p>
-        <p>{zip_code}</p>
-        <p>{website}</p>
+        <p>Rating: {rating}</p>
         <p>{description}</p>
+        <p>{address}<br></br>
+          {location}<br></br>
+          {zip_code}
+        </p>
+        <a href={website} target="_blank" className='link'>Website</a>
+
+        <NavLink to="/"
+          style={{ color: 'inherit', textDecoration: 'inherit'}}
+          className='button-back'>Back to search results
+        </NavLink>
       </div>
-      {/* <NavLink to={``} /> */}
     </section>
   );
 }
