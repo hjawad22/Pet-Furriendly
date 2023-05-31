@@ -17,12 +17,12 @@ class Search extends Component {
     return (
       <div className="form-container">
         <form className="form">
-          <input type="text" className="city-inp" placeholder="City" onChange={() => {
-            this.handleChange()
-            this.props.filterPlaces()
+          <input type="text" className="city-inp" placeholder="City" onChange={(event) => {
+            this.handleChange(event)
+            this.props.filterPlaces(this.state.city)
           }
           }></input>
-          <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />
+          <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />
         </form>
       </div>
     )
