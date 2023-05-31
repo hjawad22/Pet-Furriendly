@@ -1,5 +1,5 @@
 import './App.css';
-// import Router from 'react-router-dom';
+// import{ Route} from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
 
@@ -28,7 +28,7 @@ class App extends Component {
       });
   }
 
-  ffilterPlaces = userValue => {
+  filterPlaces = userValue => {
     const filtered = this.state.places.filter(place => {
       const location = place.location.toLowerCase();
       return location.includes(userValue.toLowerCase());
