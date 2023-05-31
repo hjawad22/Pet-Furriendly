@@ -7,9 +7,6 @@ export const getPlaces = (url) => {
         }
         return res.json();
       })
-      .then(placesData => {
-        return placesData;
-      })
       .catch(error => {
         console.error('Error fetching places', error);
         throw error;
