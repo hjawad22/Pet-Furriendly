@@ -15,15 +15,18 @@ class Search extends Component {
 
   render() {
     return (
-      <div className="form-container">
-        <form className="form">
-          <input type="text" className="city-inp" placeholder="City" onChange={(event) => {
-            this.handleChange(event)
-            this.props.filterPlaces(this.state.city)
-          }
-          }></input>
-          <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />
-        </form>
+      <div className="search-bar">
+        <div className="form-container">
+          <h2>Search by City:</h2>
+          <form className="form">
+            <input type="text" className="city-inp" placeholder="City" onChange={(event) => {
+              this.handleChange(event)
+              this.props.filterPlaces(this.state.city)
+            }
+            }></input>
+            <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />
+          </form>
+        </div>
       </div>
     )
   }
