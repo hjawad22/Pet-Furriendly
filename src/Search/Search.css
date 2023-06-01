@@ -21,17 +21,18 @@
 .city-inp {
   border: solid 1px;
   border-right: 0px;
-  height: 23px;
+  height: 27px;
+  width: 250px;
 }
 
 .search-icon {
   border: solid black 1px;
-  height: 25px;
+  height: 29px;
   background-color: white;
 }
 
 .search-bar {
-  height: 40%;
+  height: 45%;
   display: flex;
   justify-content: center;
   align-items: center;

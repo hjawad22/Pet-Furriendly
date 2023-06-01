@@ -21,8 +21,9 @@ class Search extends Component {
           <h2>Search by City:</h2>
           <form className="form">
             <input type="text" name="city" className="city-inp" placeholder="City" onChange={(event) => {
-              this.handleChange(event)
-              this.props.filterPlaces(this.state.city)
+              event.preventDefault();
+              this.handleChange(event);
+              this.props.filterPlaces(this.state.city);
             }
             }></input>
             <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />

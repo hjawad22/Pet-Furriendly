@@ -2,7 +2,7 @@ import './App.css';
 // import{ Route} from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
-import Search from '../Components/Search/Search'
+import Search from '../Search/Search'
 
 class App extends Component {
   constructor() {
