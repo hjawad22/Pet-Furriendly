@@ -1,8 +1,10 @@
 import './App.css';
-// import{ Route} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
-import Search from '../Search/Search'
+import Search from '../Search/Search';
+import Details from '../Details/Details';
+
 
 class App extends Component {
   constructor() {
@@ -10,7 +12,7 @@ class App extends Component {
     this.state = {
       places: [],
       results: [],
-      errorMessage: ''
+      errorMessage: '',
     }
   };
 
@@ -19,7 +21,7 @@ class App extends Component {
       .then(places => {
         this.setState({
           places: places,
-          results: places
+          results: places,
         });
       })
       .catch(error => {
@@ -47,6 +49,13 @@ class App extends Component {
         <Search filterPlaces={this.filterPlaces}/>        
         {/* <Results/> */}
         {/* <Error/> */}
+        <Route
+          exact path='/details/:id'
+          render={({ match }) => {
+            const matchedPlace = this.state.places.find(place => place.id === parseInt(match.params.id));
+            return <Details singlePlace={matchedPlace} />;
+          }}
+        />
       </main>
     );
   }
