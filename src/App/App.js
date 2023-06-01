@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
 import Details from '../Details/Details';
+import Search from '../Components/Search/Search';
 
 class App extends Component {
   constructor() {
@@ -44,7 +45,7 @@ class App extends Component {
       // <Header/>
       <main className='App'>
         {/* App content here */}
-        {/* <Form/> */}
+        <Search filterPlaces={this.filterPlaces}/>        
         {/* <Results/> */}
         {/* <Error/> */}
         <Route
