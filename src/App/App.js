@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
+import Header from '../Header/Header';
 import Search from '../Search/Search';
 import Details from '../Details/Details';
 
@@ -43,20 +44,22 @@ class App extends Component {
 
   render() {
     return (
-      // <Header/>
-      <main className='App'>
-        {/* App content here */}
-        <Search filterPlaces={this.filterPlaces}/>        
-        {/* <Results/> */}
-        {/* <Error/> */}
-        <Route
-          exact path='/details/:id'
-          render={({ match }) => {
-            const matchedPlace = this.state.places.find(place => place.id === parseInt(match.params.id));
-            return <Details singlePlace={matchedPlace} />;
-          }}
-        />
-      </main>
+      <>
+        <Header />
+        <main className='App'>
+          {/* App content here */}
+          <Search filterPlaces={this.filterPlaces}/>        
+          {/* <Results/> */}
+          {/* <Error/> */}
+          <Route
+            exact path='/details/:id'
+            render={({ match }) => {
+              const matchedPlace = this.state.places.find(place => place.id === parseInt(match.params.id));
+              return <Details singlePlace={matchedPlace} />;
+            }}
+          />
+        </main>
+      </>
     );
   }
 
