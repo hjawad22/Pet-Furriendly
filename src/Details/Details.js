@@ -22,7 +22,7 @@ function Details({ singlePlace }) {
           {location}<br></br>
           {zip_code}
         </p>
-        <a href={website} target="_blank" className='link'>Website</a>
+        <a href={website} className='link'>Website</a>
 
         <NavLink to="/"
           style={{ color: 'inherit', textDecoration: 'inherit'}}
