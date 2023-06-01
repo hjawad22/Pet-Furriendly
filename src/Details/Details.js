@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import './Details.css';
 
 function Details({ singlePlace }) {
+  if (!singlePlace) {
+    return;
+  };
+
   const { name, address, location, category, zip_code, rating, website, description, src, alt } = singlePlace;
   
   return (
@@ -27,7 +31,7 @@ function Details({ singlePlace }) {
       </div>
     </section>
   );
-}
+};
 
 export default Details;
 
@@ -43,5 +47,5 @@ Details.propTypes = {
     description: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
-  }).isRequired
-}
+  })
+};
