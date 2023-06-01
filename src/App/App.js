@@ -2,6 +2,7 @@ import './App.css';
 // import{ Route} from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
+import Header from '../Header/Header';
 
 class App extends Component {
   constructor() {
@@ -40,13 +41,15 @@ class App extends Component {
 
   render() {
     return (
-      // <Header/>
-      <main className='App'>
-        {/* App content here */}
-        {/* <Form/> */}
-        {/* <Results/> */}
-        {/* <Error/> */}
-      </main>
+      <>
+        <Header />
+        <main className='App'>
+          {/* App content here */}
+          {/* <Form/> */}
+          {/* <Results/> */}
+          {/* <Error/> */}
+        </main>
+      </> 
     );
   }
 
