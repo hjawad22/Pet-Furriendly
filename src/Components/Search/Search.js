@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+import propTypes from 'prop-types';
 
 class Search extends Component {
   constructor(){
@@ -19,7 +20,7 @@ class Search extends Component {
         <div className="form-container">
           <h2>Search by City:</h2>
           <form className="form">
-            <input type="text" className="city-inp" placeholder="City" onChange={(event) => {
+            <input type="text" name="city" className="city-inp" placeholder="City" onChange={(event) => {
               this.handleChange(event)
               this.props.filterPlaces(this.state.city)
             }
@@ -30,6 +31,10 @@ class Search extends Component {
       </div>
     )
   }
+}
+
+Search.protoTypes = {
+  filterPlaces: propTypes.func
 }
 
 export default Search
