@@ -1,11 +1,21 @@
 .card-container {
   display: flex;
+  align-items: center;
   border: black solid 2px;
   border-radius: 15px;
-  height: 400px;
-  width: 700px;
+  height: 175px;
+  width: 425px;
 }
 
 .card-image {
-  height: 150px;
+  height: 110px;
+  margin-left: 10px;
+}
+
+.card-details {
+  margin-left: 15px;
+}
+
+.card-location, .card-category {
+  font-size: 18px;
 }

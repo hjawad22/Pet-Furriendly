@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
 import Details from '../Details/Details';
 import Search from '../Components/Search/Search';
+import Results from '../Results/Results'
 
 class App extends Component {
   constructor() {
@@ -45,8 +46,6 @@ class App extends Component {
       // <Header/>
       <main className='App'>
         {/* App content here */}
-        <Search filterPlaces={this.filterPlaces}/>        
-        {/* <Results/> */}
         {/* <Error/> */}
         <Route
           exact path='/details/:id'
@@ -55,10 +54,20 @@ class App extends Component {
             return <Details singlePlace={matchedPlace} />;
           }}
         />
+
+        <Route exact path='/' render={() => {
+        return(
+          <>
+            <Search filterPlaces={this.filterPlaces}/>
+            <div className='results-component-container'>
+              <Results places={this.state.results}/> 
+            </div>;        
+          </>
+        )
+        }}/>
       </main>
     );
   }
-
 }
 
 export default App;
