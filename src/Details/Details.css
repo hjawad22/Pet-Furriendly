@@ -1,0 +1,32 @@
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.details-image {
+  width: 20rem;
+  height: 15rem;
+  margin: 1.5rem;
+}
+
+.details-info {
+  width: 60%;
+}
+
+.link {
+  display: block;
+  margin: 1rem 0;
+}
+
+.button-back {
+  display: block;
+  width: 14rem;
+  height: 2rem;
+  margin: 2rem 0;
+  border-radius: 2rem;
+  background-color: orange;
+  text-align: center;
+  line-height: 2rem;
+}
