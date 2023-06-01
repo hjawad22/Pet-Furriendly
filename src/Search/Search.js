@@ -18,7 +18,7 @@ class Search extends Component {
     return (
       <div className="search-bar">
         <div className="form-container">
-          <h2>Search by City:</h2>
+          <h2 className="search-label">Search by City:</h2>
           <form className="form">
             <input type="text" name="city" className="city-inp" placeholder="City" onChange={(event) => {
               event.preventDefault();

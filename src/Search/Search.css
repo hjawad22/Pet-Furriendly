@@ -40,3 +40,22 @@
   background-size: cover;
   background-position: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .city-inp {
+    width: 80%;
+  }
+
+  .search-bar,
+  .form-container {
+    height: 35%;
+  }
+
+  .search-label {
+    margin: 10px;
+  }
+}
