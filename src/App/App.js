@@ -2,8 +2,9 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
+import Search from '../Search/Search';
 import Details from '../Details/Details';
-import Search from '../Components/Search/Search';
+
 
 class App extends Component {
   constructor() {
