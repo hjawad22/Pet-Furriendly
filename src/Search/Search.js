@@ -21,7 +21,9 @@ class Search extends Component {
         <div className="form-container">
           <h2 className="search-label">Search by City:</h2>
           <form className="form">
-            <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />
+            <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" onClick={() => {
+              this.props.filterPlaces(this.state.search)
+            }}/>
             <input type="text" 
               name="city"
               className="city-inp"

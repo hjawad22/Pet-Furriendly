@@ -35,6 +35,7 @@
   height: 29px;
   background-color: white;
   left: 0;
+  cursor: pointer;
 }
 
 .search-bar {
@@ -53,7 +54,7 @@
   }
 
   .city-inp {
-    width: 80%;
+    width: 250px;
   }
 
   .search-bar,
