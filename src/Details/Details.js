@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import './Details.css';
 import Errors from '../Errors/Errors';
 
-function Details({ singlePlace }) {
+function Details({ singlePlace, error }) {
   if (!singlePlace) {
-    return (<Errors errorMessage={'Page Not Found'} />)
+    return (<Errors errorMessage={error} />)
   };
 
   const { name, address, location, category, zip_code, rating, website, description, src, alt } = singlePlace;
