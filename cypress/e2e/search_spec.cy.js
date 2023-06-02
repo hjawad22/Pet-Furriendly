@@ -8,7 +8,7 @@ beforeEach(() => {
 
 describe('User can use the search bar to filter places by city name', () => {
   it('will see a search bar with an input field and search for a city', () => {
-    cy.get('input').type("denver")
+    cy.get('input').type("denver").get('.card-container').should('have.length', 6)
   })
 
   it('will show nothing if the city is not there', () => {
