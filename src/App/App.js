@@ -5,7 +5,7 @@ import { getPlaces } from '../apiCalls';
 import Header from '../Header/Header';
 import Search from '../Search/Search';
 import Details from '../Details/Details';
-
+import Results from '../Results/Results';
 
 class App extends Component {
   constructor() {
@@ -46,11 +46,17 @@ class App extends Component {
     return (
       <>
         <Header />
-        <main className='App'>
-          {/* App content here */}
-          <Search filterPlaces={this.filterPlaces}/>        
-          {/* <Results/> */}
-          {/* <Error/> */}
+        <main className='App'>    
+        <Route exact path='/' render={() => {
+           return(
+            <>
+              <Search filterPlaces={this.filterPlaces}/>
+              <div className='results-component-container'>
+                <Results places={this.state.results}/> 
+              </div>;        
+            </>
+          )
+        }}/>   
           <Route
             exact path='/details/:id'
             render={({ match }) => {
@@ -62,7 +68,6 @@ class App extends Component {
       </>
     );
   }
-
 }
 
 export default App;

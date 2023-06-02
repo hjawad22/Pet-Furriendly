@@ -1,16 +1,27 @@
-import './Results.css'
 import React from "react";
-import Card from '../Card/Card'
+import Card from '../Card/Card';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import './Results.css';
+
 
 const Results = ({places}) => {
-  return(places.map(place => {
+  const resultsCards = places.map(place => {
     return (
-      <div className='results-container'>
+      <Link key={place.id} to={`/details/${place.id}`}>
         <Card {...place} />
-      </div>
-    )
-  }))
+      </Link>
+    );
+  })
+  return(
+    <div className='results-container'>
+      {resultsCards}
+    </div>
+  );
+};
 
+export default Results;
+
+Results.propTypes = {
+  places: PropTypes.arrayOf(PropTypes.object).isRequired
 }
-
-export default Results

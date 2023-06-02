@@ -2,3 +2,9 @@ html,
 main {
   height: 100%;
 }
+
+.results-component-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
