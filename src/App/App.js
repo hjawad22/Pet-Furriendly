@@ -50,10 +50,10 @@ class App extends Component {
         <Route exact path='/' render={() => {
            return(
             <>
-              <Search filterPlaces={this.filterPlaces}/>
+              <Search places={this.state.results} filterPlaces={this.filterPlaces}/>
               <div className='results-component-container'>
                 <Results places={this.state.results}/> 
-              </div>;        
+              </div>   
             </>
           )
         }}/>   

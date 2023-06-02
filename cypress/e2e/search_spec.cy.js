@@ -12,6 +12,6 @@ describe('User can use the search bar to filter places by city name', () => {
   })
 
   it('will show nothing if the city is not there', () => {
-    cy.get('input').type('Boston')
+    cy.get('input').type('Boston').get('p').contains('We a-paw-logize, there are no current results for this city!')
   })
 })
