@@ -2,10 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Details.css';
+import Errors from '../Errors/Errors';
 
 function Details({ singlePlace }) {
   if (!singlePlace) {
-    return;
+    return (<Errors errorMessage={'Page Not Found'} />)
   };
 
   const { name, address, location, category, zip_code, rating, website, description, src, alt } = singlePlace;
