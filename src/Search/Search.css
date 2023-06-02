@@ -12,7 +12,6 @@
 .form {
   display: flex;
   margin: 20px;
-  position: relative;
 }
 
 .input {
@@ -27,16 +26,15 @@
   resize: none;
 }
 
-/* .city-inp:focus {
-  outline: solid orange 2px;
-} */
+.city-inp:focus {
+  outline: 0;
+}
 
 .search-icon {
   /* border: solid black 1px; */
   height: 29px;
   background-color: white;
-  position: absolute;
-  right: 0;
+  left: 0;
 }
 
 .search-bar {
@@ -45,7 +43,7 @@
   justify-content: center;
   align-items: center;
   background-image: url("https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
-  background-size: cover;
+  background-size: fill;
   background-position: center;
 }
 
@@ -68,6 +66,6 @@
   }
 
   .search-icon {
-    right: 50%;
+    left: 0;
   }
 }

@@ -21,18 +21,18 @@ class Search extends Component {
         <div className="form-container">
           <h2 className="search-label">Search by City:</h2>
           <form className="form">
+            <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />
             <input type="text" 
               name="city"
               className="city-inp"
               placeholder="City"
               onChange={(event) => {
-                changeState(event)
-                filterPlaces(event.target.value);
+                this.changeState(event)
+                this.props.filterPlaces(event.target.value);
               }}
               onKeyDown={(event) => {
                 event.keyCode === 13 && event.preventDefault();
               }}></input>
-            <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" />
           </form>
         </div>
       </div>
