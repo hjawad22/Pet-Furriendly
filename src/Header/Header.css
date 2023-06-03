@@ -25,3 +25,27 @@ h1 {
   font-family: 'Darumadrop One', cursive;
   margin: 0 0 0.5rem 0;
 }
+
+@media screen and (max-width: 570px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
+  }
+
+  .logo-image {
+    height: 5rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .logo-image {
+    height: 4rem;
+  }
+}
