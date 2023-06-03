@@ -26,6 +26,6 @@ Pet Furriendly is an application that allows the user to locate pet friendly loc
 
 ## Contributors
 - Tiala Young: [Github](https://github.com/tialaaa) | [linkedin](https://www.linkedin.com/in/tialayoung/)
-- Priscilla Paxton: [Github](https://github.com/tialaaa) | [linkedin](https://www.linkedin.com/in/priscilla-paxton/))
+- Priscilla Paxton: [Github](https://github.com/tialaaa) | [linkedin](https://www.linkedin.com/in/priscilla-paxton/)
 - Houda Jawad: [Github](https://github.com/hjawad22) | [linkedin](https://www.linkedin.com/in/houda-jawad-b0315675/)
 - Patrick Ankiewicz: [Github](https://github.com/Pma913) | [linkedin](https://www.linkedin.com/in/patrick-ankiewicz/)
