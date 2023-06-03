@@ -14,16 +14,18 @@ class App extends Component {
     this.state = {
       places: [],
       results: [],
+      loading: true,
       errorMessage: '',
     }
   };
 
   componentDidMount() {
-    getPlaces('http://localhost:8080/api/v1/places')
+    getPlaces()
       .then(places => {
         this.setState({
           places: places,
           results: places,
+          loading: false,
         });
       })
       .catch(error => {
@@ -50,17 +52,20 @@ class App extends Component {
         <main className='App'>
           <Switch>
             <Route exact path='/' render={() => {
-              if(this.state.errorMessage) {
-                return(<Errors errorMessage={this.state.errorMessage} />)
-              }
-              return (
+              return this.state.errorMessage ? (
+                <Errors errorMessage={this.state.errorMessage} /> 
+              ) : (
                 <>
                   <Search filterPlaces={this.filterPlaces} />
                   <div className='results-component-container'>
-                    <Results places={this.state.results} />
-                  </div>;
+                    {this.state.loading ? (
+                    <p className='loading-message'>Loading your favorite places...</p> 
+                    ) : ( 
+                      <Results places={this.state.results} /> 
+                    )}
+                  </div>
                 </>
-              )
+              );
             }} />
             <Route
               exact path='/details/:id'
@@ -68,7 +73,6 @@ class App extends Component {
                 const matchedPlace = this.state.places.find(place => place.id === parseInt(match.params.id));
                 return <Details singlePlace={matchedPlace} />;
               }}
-
             />
             <Route path="*" render={() => {
               return (

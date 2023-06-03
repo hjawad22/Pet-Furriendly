@@ -8,3 +8,23 @@
 .search-error {
   color: rgb(83, 83, 83);
 }
+
+@media screen and (max-width: 52em) {
+  .results-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .results-component-container {
+    justify-content: center;
+  }
+  .results-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+

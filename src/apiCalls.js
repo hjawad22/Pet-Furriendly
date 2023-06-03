@@ -1,14 +1,10 @@
 
-export const getPlaces = (url) => {
-    return fetch(url)
+export function getPlaces () {
+    return fetch('https://pet-furriendly-server.onrender.com/api/v1/places')
       .then(res => {
         if (!res.ok) {
           throw new Error('Oops! We seem to be having some technical issues, please try again later!');
         }
         return res.json();
-      })
-      .catch(error => {
-        console.error('Error fetching places', error);
-        throw new Error('Oops! We seem to be having some technical issues, please try again later!');
-      });
+    })
   };
