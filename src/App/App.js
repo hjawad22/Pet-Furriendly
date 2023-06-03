@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
 import Header from '../Header/Header';
@@ -79,7 +79,6 @@ class App extends Component {
             <Route path="*" render={() => {
               return (
                 <Errors errorMessage={this.state.errorMessage} />)
-
             }} />
           </Switch>
         </main>

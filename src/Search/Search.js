@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './Search.css';
 import propTypes from 'prop-types';
-
+import './Search.css';
 
 class Search extends Component {
   constructor() {
@@ -42,8 +41,8 @@ class Search extends Component {
   }
 }
 
-Search.protoTypes = {
-  filterPlaces: propTypes.func
-}
+Search.propTypes = {
+  filterPlaces: propTypes.func.isRequired
+};
 
-export default Search
+export default Search;

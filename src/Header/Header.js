@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import propTypes from 'prop-types';
 import './Header.css';
 
 const Header = ({resetResults}) => {
@@ -17,3 +18,7 @@ const Header = ({resetResults}) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  resetResults: propTypes.func
+};

@@ -28,4 +28,3 @@ Card.propTypes = {
   category: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
 };
-
