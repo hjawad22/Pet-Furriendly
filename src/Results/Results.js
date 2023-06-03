@@ -22,7 +22,6 @@ const Results = ({places, loading}) => {
 export default Results;
 
 Results.propTypes = {
-  places: PropTypes.arrayOf(PropTypes.object).isRequired
+  places: PropTypes.arrayOf(PropTypes.object).isRequired,
+  loading: PropTypes.bool.isRequired
 };
-
-

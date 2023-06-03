@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './Details.css';
 import Errors from '../Errors/Errors';
+import './Details.css';
 
 function Details({ singlePlace, error }) {
   if (!singlePlace) {
@@ -24,7 +24,6 @@ function Details({ singlePlace, error }) {
           {zip_code}
         </p>
         <a href={website} className='link'>Website</a>
-
         <NavLink to="/"
           style={{ color: 'inherit', textDecoration: 'inherit'}}
           className='button-back'>Back to search results
