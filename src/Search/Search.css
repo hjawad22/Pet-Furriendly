@@ -19,16 +19,22 @@
 }
 
 .city-inp {
-  border: solid 1px;
+  border: solid 0px;
   border-right: 0px;
   height: 27px;
   width: 250px;
+  resize: none;
+}
+
+.city-inp:focus {
+  outline: 0;
 }
 
 .search-icon {
-  border: solid black 1px;
   height: 29px;
   background-color: white;
+  left: 0;
+  cursor: pointer;
 }
 
 .search-bar {
@@ -47,7 +53,7 @@
   }
 
   .city-inp {
-    width: 80%;
+    width: 250px;
   }
 
   .search-bar,
@@ -57,5 +63,9 @@
 
   .search-label {
     margin: 10px;
+  }
+
+  .search-icon {
+    left: 0;
   }
 }
