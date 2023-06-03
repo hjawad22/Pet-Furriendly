@@ -25,8 +25,9 @@ This application was completed over 7 days in Module3 (week 4) of [Turing School
 - JSX
 
 ## Deployed Pages
-- [Backend](https://pet-furriendly-server.onrender.com/api/v1/places)
 - Frontend Coming soon 
+- [Backend API](https://pet-furriendly-server.onrender.com/api/v1/places)
+- [Back End Repo](https://github.com/priscillaapaxton/pet-furriendly-api)
 
 ## Wins
 - Through diligent exploration and planning, we were able to devise an effective strategy to tackle the backend development, enabling us to create a deployed API, specifically by:
@@ -52,13 +53,8 @@ For this project and the time frame given, the MVP or Minimal Viable Produce we 
   - Commenting on locations
 
 ## Installation
-- clone the [Front End Repo](https://github.com/hjawad22/Pet-Furriendly)
-- `cd` into Pet-Furriendly
-- run `npm i`
-- run `npm start`
-- - -
-- clone the [Back End Repo](https://github.com/priscillaapaxton/pet-furriendly-api)
-- `cd` into pet-furriendly-api
+- using the terminal, clone the [Front End Repo](https://github.com/hjawad22/Pet-Furriendly)
+- `cd` into Pet-Furriendly directory
 - run `npm i`
 - run `npm start`
 
