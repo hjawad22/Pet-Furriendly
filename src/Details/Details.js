@@ -16,7 +16,7 @@ function Details({ singlePlace, error }) {
       <img className='details-image' src={src} alt={alt} />
       <div className='details-info'>
         <h2 className='details-name'>{name}</h2>
-        <p>{category}</p>
+        <p className='details-category'>{category}</p>
         <p>Rating: {rating}</p>
         <p>{description}</p>
         <p>{address}<br></br>
