@@ -8,7 +8,7 @@ describe('User flow to Details page', () => {
   });
 
   it('Should allow a user to select one place from the results list and be redirected to a details page', () => {
-    cy.get('.card-container').contains('h3', 'The Exchange').click()
+    cy.get('.card-container').contains('p', 'The Exchange').click()
     cy.url().should('eq', 'http://localhost:3000/details/3')
   });
 
@@ -28,7 +28,10 @@ describe('User flow to Details page', () => {
 
   it('Should allow a user to go back to the homepage, which will display the same filtered results list', () => {
     cy.get('.city-inp').type('Boul')
-    cy.get('.card-container').contains('h3', 'Rayback').click()
+    cy.get('.results-container')
+      .get('.card-container')
+      .should('have.length', 1)
+    cy.get('.card-container').contains('p', 'Rayback').click()
     cy.url().should('eq', 'http://localhost:3000/details/2')
     cy.get('.button-back').click()
     cy.url().should('eq', 'http://localhost:3000/')
