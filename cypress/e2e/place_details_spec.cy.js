@@ -1,6 +1,6 @@
 describe('User flow to Details page', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'http://localhost:8080/api/v1/places', {
+    cy.intercept('GET', 'https://pet-furriendly-server.onrender.com/api/v1/places', {
       statusCode: 200,
       fixture: 'places'
     })
@@ -27,8 +27,13 @@ describe('User flow to Details page', () => {
   });
 
   it('Should allow a user to go back to the homepage, which will display the same filtered results list', () => {
-    cy.visit('http://localhost:3000/details/3')
+    cy.get('.city-inp').type('Boul')
+    cy.get('.card-container').contains('h3', 'Rayback').click()
+    cy.url().should('eq', 'http://localhost:3000/details/2')
     cy.get('.button-back').click()
     cy.url().should('eq', 'http://localhost:3000/')
+    cy.get('.results-container')
+      .get('.card-container')
+      .should('have.length', 1)
   });
 });

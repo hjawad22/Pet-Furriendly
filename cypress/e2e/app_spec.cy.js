@@ -1,6 +1,6 @@
 describe('App component', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'http://localhost:8080/api/v1/places', {
+    cy.intercept('GET', 'https://pet-furriendly-server.onrender.com/api/v1/places', {
       statusCode: 200,
       fixture: 'places'
     })
