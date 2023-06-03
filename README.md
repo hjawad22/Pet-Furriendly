@@ -5,7 +5,7 @@ Pet Furriendly is a user-friendly application that helps pet owners in Colorado 
 
 
 ## Illustrations
-![giff coming soon]()
+![giff of pet furriendly](https://media.giphy.com/media/b3sIQAjbQMDbkHB8DN/giphy.gif)
 
 ## Context
 This application was completed over 7 days in Module3 (week 4) of [Turing School of Software and Design](https://turing.edu/)'s Front End Engineering program. The project was built to match the specifications of [this project rubric](https://frontend.turing.edu/projects/module-3/stretch.html), which required the engineering team to learn a new technology and integrate it into a React app. For our stretch tech, we decided to build a backend for Pet Furriendly. Pet Furriendly incorporated the following:
