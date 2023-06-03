@@ -1,6 +1,6 @@
 describe('App component', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'http://localhost:8080/api/v1/places', {
+    cy.intercept('GET', 'https://pet-furriendly-server.onrender.com/api/v1/places', {
       statusCode: 200,
       fixture: 'places'
     })
@@ -26,7 +26,7 @@ describe('App component', () => {
     .should('have.length', 24)
     .get('.card-container')
     .children().first()
-    cy.contains('h3','Improper City')
+    cy.contains('p','Improper City')
     cy.contains('p', 'Denver, Colorado')
     cy.contains('p','Restaurants & Bars')
   })
@@ -36,7 +36,7 @@ describe('App component', () => {
     .get('.card-container')
     .should('have.length', 24)
     .children().last()
-    cy.contains('h3', 'Palmer Park')
+    cy.contains('p', 'Palmer Park')
     cy.contains('p', 'Colorado Springs, Colorado')
     cy.contains('p', 'Outdoorsy')
   })

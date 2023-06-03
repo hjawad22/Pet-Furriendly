@@ -1,6 +1,6 @@
 describe('Errors spec', () => {
   it('should display error message for home page for client side error', () => {
-    cy.intercept("GET", "http://localhost:8080/api/v1/places", {
+    cy.intercept("GET", "https://pet-furriendly-server.onrender.com/api/v1/places", {
       statusCode: 404,
     });
     cy.visit('http://localhost:3000')
@@ -11,7 +11,7 @@ describe('Errors spec', () => {
   })
 
   it('should display error message for home page for server side error', () => {
-    cy.intercept("GET", "http://localhost:8080/api/v1/places", {
+    cy.intercept("GET", "https://pet-furriendly-server.onrender.com/api/v1/places", {
       statusCode: 500,
   
     });
@@ -21,7 +21,7 @@ describe('Errors spec', () => {
   })
 
   it('should display error message for wild card path', () => {
-    cy.intercept("GET", "http://localhost:8080/api/v1/places", {
+    cy.intercept("GET", "https://pet-furriendly-server.onrender.com/api/v1/places", {
       statusCode: 200,
       fixture: "places"
     });
