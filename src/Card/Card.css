@@ -10,8 +10,10 @@
 }
 
 .card-image {
+  width: 10rem;
   height: 7rem;
   margin-left: 3%;
+  object-fit: cover;
 }
 
 .card-details {
@@ -23,13 +25,20 @@
   font-weight: bold;
 }
 
-.card-location, .card-category {
+.card-location {
   font-size: 18px;
+}
+
+.card-category {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 52em) {
   .card-image {
+    width: 8rem;
     height: 5rem;
+    object-fit: cover;
   }
   .card-name {
     font-size: 16px;
