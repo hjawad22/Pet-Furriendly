@@ -2,10 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Details.css';
+import Errors from '../Errors/Errors';
 
-function Details({ singlePlace }) {
+function Details({ singlePlace, error }) {
   if (!singlePlace) {
-    return;
+    return (<Errors errorMessage={error} />)
   };
 
   const { name, address, location, category, zip_code, rating, website, description, src, alt } = singlePlace;
@@ -14,7 +15,7 @@ function Details({ singlePlace }) {
     <section className='details-container'>
       <img className='details-image' src={src} alt={alt} />
       <div className='details-info'>
-        <h2>{name}</h2>
+        <h2 className='details-name'>{name}</h2>
         <p>{category}</p>
         <p>Rating: {rating}</p>
         <p>{description}</p>

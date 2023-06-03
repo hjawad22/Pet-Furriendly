@@ -1,11 +1,12 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 import React, { Component } from 'react';
 import { getPlaces } from '../apiCalls';
 import Header from '../Header/Header';
 import Search from '../Search/Search';
 import Details from '../Details/Details';
 import Results from '../Results/Results';
+import Errors from '../Errors/Errors';
 
 class App extends Component {
   constructor() {
@@ -46,24 +47,35 @@ class App extends Component {
     return (
       <>
         <Header />
-        <main className='App'>    
-        <Route exact path='/' render={() => {
-           return(
-            <>
-              <Search filterPlaces={this.filterPlaces}/>
-              <div className='results-component-container'>
-                <Results places={this.state.results}/> 
-              </div>   
-            </>
-          )
-        }}/>   
-          <Route
-            exact path='/details/:id'
-            render={({ match }) => {
-              const matchedPlace = this.state.places.find(place => place.id === parseInt(match.params.id));
-              return <Details singlePlace={matchedPlace} />;
-            }}
-          />
+        <main className='App'>
+          <Switch>
+            <Route exact path='/' render={() => {
+              if(this.state.errorMessage) {
+                return(<Errors errorMessage={this.state.errorMessage} />)
+              }
+              return (
+                <>
+                  <Search filterPlaces={this.filterPlaces} />
+                  <div className='results-component-container'>
+                    <Results places={this.state.results} />
+                  </div>;
+                </>
+              )
+            }} />
+            <Route
+              exact path='/details/:id'
+              render={({ match }) => {
+                const matchedPlace = this.state.places.find(place => place.id === parseInt(match.params.id));
+                return <Details singlePlace={matchedPlace} />;
+              }}
+
+            />
+            <Route path="*" render={() => {
+              return (
+                <Errors errorMessage={this.state.errorMessage} />)
+
+            }} />
+          </Switch>
         </main>
       </>
     );
