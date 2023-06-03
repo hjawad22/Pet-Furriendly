@@ -9,7 +9,7 @@
   color: rgb(83, 83, 83);
 }
 
-@media screen and (max-width: 52em) {
+@media screen and (max-width: 60em) {
   .results-container {
     width: 85%;
     display: grid;
