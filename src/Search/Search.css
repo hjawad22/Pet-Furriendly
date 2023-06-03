@@ -2,16 +2,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 30%;
+  height: 20%;
   width: 60%;
   background-color: rgba(255, 255, 255, 0.567);
   color: rgb(0, 0, 0);
   margin-top: 6%;
+  border-radius: 1rem;
 }
 
 .form {
   display: flex;
   margin: 20px;
+  height: 30px;
 }
 
 .input {
@@ -19,19 +21,20 @@
 }
 
 .city-inp {
+  padding: 0.2rem 1rem;
   border: solid 0px;
   border-right: 0px;
-  height: 27px;
   width: 250px;
   resize: none;
 }
 
 .city-inp:focus {
-  outline: 0;
+  outline: orange solid 2px;
 }
 
 .search-icon {
   height: 29px;
+  height: 100%;
   background-color: white;
   left: 0;
   cursor: pointer;
@@ -67,5 +70,15 @@
 
   .search-icon {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .form {
+    width: 90%;
+  }
+
+  .city-inp {
+    width: 90%;
   }
 }
