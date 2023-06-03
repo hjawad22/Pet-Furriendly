@@ -3,8 +3,7 @@
 ## Abstract
 Pet Furriendly is a user-friendly application that helps pet owners in Colorado find nearby pet-friendly locations to visit with their furry friends. By providing specific search criteria, users can easily locate destinations that welcome pets. With just a few clicks, users can access detailed information about each place, including the option to visit the website for additional details. Our goal is to solve the problem that pet owners face by conveniently providing them with a comprehensive list of places where their beloved pets are welcome. Because if you're there, your pets should be there too!
 
-
-## Illustrations
+## Demonstration
 ![giff of pet furriendly](https://media.giphy.com/media/b3sIQAjbQMDbkHB8DN/giphy.gif)
 
 ## Context
@@ -19,14 +18,15 @@ This application was completed over 7 days in Module3 (week 4) of [Turing School
 - Knex.js
 - postgreSQL
 - pgAdmin
-- Render, for backend deployment and hosting
-- propTypes
+- Render, for backend deployment and database hosting
+- Vercel, for frontend deployment
+- PropTypes
 - CSS
 - JSX
 
 ## Deployed Pages
-- Frontend Coming soon 
-- [Backend API](https://pet-furriendly-server.onrender.com/api/v1/places)
+- [Pet Furriendly App](https://pet-furriendly.vercel.app/)
+- [Back End API](https://pet-furriendly-server.onrender.com/api/v1/places)
 - [Back End Repo](https://github.com/priscillaapaxton/pet-furriendly-api)
 
 ## Wins
@@ -39,7 +39,7 @@ This application was completed over 7 days in Module3 (week 4) of [Turing School
 
 ## Challenges
 - The main challenges all revolved around us diving into new-to-us backend technologies. This required careful consideration and planning due to our lack of prior knowledge in this area. The planning and implementing of this process took several days and extensive research, but ultimately proved successful in the end. 
-- Deployment also proved a challenge, as we had learn to use a cloud deployment service and work through configuration issues.
+- Deployment for the backend also proved a challenge, as we had learn to use a cloud deployment service and work through configuration issues.
 
 ## Improvements
 For this project and the time frame given, the MVP or Minimal Viable Produce we mapped for ourselves was to establish and host a database, then build an application that would use that database to display the data, filter through it, and select and view individual pieces of data. 
