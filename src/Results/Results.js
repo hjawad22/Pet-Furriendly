@@ -13,6 +13,9 @@ const Results = ({places}) => {
       </Link>
     );
   })
+  if(places.length === 0) {
+    return(<p className="search-error">We a-paw-logize, there are no current results for this city!</p>)
+  }
   return(
     <div className='results-container'>
       {resultsCards}

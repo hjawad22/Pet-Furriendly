@@ -9,6 +9,6 @@ export const getPlaces = (url) => {
       })
       .catch(error => {
         console.error('Error fetching places', error);
-        throw error;
+        throw new Error('Oops! We seem to be having some technical issues, please try again later!');
       });
   };
