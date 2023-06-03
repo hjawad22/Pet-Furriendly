@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-const Header = () => {
+
+const Header = ({resetResults}) => {
   return (
     <header className='header'>
-      <Link to='/'>
-        <img className='logo-image' src='/logo.png' alt='black and brown dachschund'/>
+      <Link to='/' onClick={resetResults}>
+        <img className='logo-image' src='/logo.png' alt='black and brown dachschund'  />
       </Link>
       <div className='header-text'>
         <h1>Pet Furriendly</h1>

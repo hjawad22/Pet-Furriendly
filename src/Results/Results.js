@@ -3,18 +3,20 @@ import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import './Results.css';
 
-const Results = ({places}) => {
-  return !places.length ? (
+const Results = ({places, loading}) => {
+  return loading ?  (
+    <p className='loading-message'>Loading your favorite places...</p>
+  ) : ( 
+    !places.length ? (
       <p className='search-error'>We a-paw-logize, there are no current results for this city!</p>
     ) : (
         <div className='results-container'>
-            {places.map(place => {
-              return(
+            {places.map(place => (
                 <Card {...place} key={place.id} />
-              )
-            })}
+              ))}
         </div>
       )
+    );
 };
 
 export default Results;
