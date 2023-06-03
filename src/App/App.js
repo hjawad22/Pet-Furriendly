@@ -33,7 +33,7 @@ class App extends Component {
           errorMessage: error.message
         });
       });
-  }
+  };
 
   filterPlaces = userValue => {
     const filtered = this.state.places.filter(place => {
@@ -45,10 +45,16 @@ class App extends Component {
     });
   };
 
+  resetResults = () => {
+    this.setState({
+      results: this.state.places
+    })
+  };
+
   render() {
     return (
       <>
-        <Header />
+        <Header resetResults={this.resetResults}/>
         <main className='App'>
           <Switch>
             <Route exact path='/' render={() => {
@@ -58,11 +64,7 @@ class App extends Component {
                 <>
                   <Search filterPlaces={this.filterPlaces} />
                   <div className='results-component-container'>
-                    {this.state.loading ? (
-                    <p className='loading-message'>Loading your favorite places...</p> 
-                    ) : ( 
-                      <Results places={this.state.results} /> 
-                    )}
+                      <Results places={this.state.results} loading={this.state.loading}/> 
                   </div>
                 </>
               );
@@ -83,7 +85,7 @@ class App extends Component {
         </main>
       </>
     );
-  }
+  };
 }
 
 export default App;
