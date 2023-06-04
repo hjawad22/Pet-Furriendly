@@ -20,13 +20,16 @@ class Search extends Component {
         <div className="form-container">
           <h2 className="search-label">Search by City:</h2>
           <form className="form">
-            <img className="search-icon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="spy glass icon" onClick={() => {
-              this.props.filterPlaces(this.state.search)
-            }}/>
+            <img className="search-clear" src="/x-mark.png" alt="x-icon" onClick={() => {
+              this.setState({ search: '' })
+              this.props.filterPlaces('')
+            }} />
+            <img className="search-icon" src="/search.png" alt="spy glass icon" />
             <input type="text" 
               name="city"
               className="city-inp"
               placeholder="City"
+              value={this.state.search}
               onChange={(event) => {
                 this.changeState(event)
                 this.props.filterPlaces(event.target.value);
